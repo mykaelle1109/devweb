@@ -7,8 +7,8 @@ app_Mykaelle.secret_key = "secretkey"  # Necessário para mensagens flash
 def login():
     return render_template("login.html")
 
-@app_Mykaelle.route("/register", methods=["GET", "POST"])
-def register():
+@app_Mykaelle.route("/cadastro", methods=["GET", "POST"])
+def cadastro():
     if request.method == "POST":
         name = request.form["name"]
         cpf = request.form["cpf"]
@@ -20,12 +20,12 @@ def register():
 
         if password != confirm_password:
             flash("As senhas não coincidem. Tente novamente!", "error")
-            return redirect(url_for("register"))
+            return redirect(url_for("cadastro"))
         
         flash("Cadastro realizado com sucesso!", "success")
         return redirect(url_for("login"))
 
-    return render_template("register.html")
+    return render_template("cadastro.html")
 
 if __name__ == "__main__":
     app_Mykaelle.run(debug=True)
