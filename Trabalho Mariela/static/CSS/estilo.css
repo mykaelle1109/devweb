@@ -1,13 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-image: url("/static/images/contabillidade.jpg"); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    min-height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    color: #fff; /* Altere a cor do texto para contrastar com o fundo */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-image: url("/static/images/contabillidade.jpg"); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Garante que a imagem cubra todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    min-height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    color: #fff; /* Altere a cor do texto para contrastar com o fundo */
+    margin: 0;
+    padding: 0;
     padding: 1rem;
     text-align: center;
 }
@@ -45,3 +58,5 @@ footer {
 #passwordRequirements li {
     margin-left: 15px;
 }
+
+
