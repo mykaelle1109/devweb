@@ -3,26 +3,26 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<div class="bg-custom my-5">
+<div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card shadow-lg">
+            <div class="card">
                 <div class="card-header bg-primary text-white text-center">
-                    <h2>Login</h2>
+                    <h3>Login</h3>
                 </div>
                 <div class="card-body">
                     {% with messages = get_flashed_messages(with_categories=True) %}
-                        {% if messages %}
-                            {% for category, message in messages %}
-                                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                                    {{ message }}
-                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                </div>
-                            {% endfor %}
-                        {% endif %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                                {{ message }}
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
                     {% endwith %}
                     
-                    <form action="/login" method="post" id="loginForm" class="needs-validation" novalidate>
+                    <form method="POST" action="{{ url_for('autenticar') }}">
                         <div class="mb-3">
                             <label for="email" class="form-label">E-mail:</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
@@ -32,12 +32,12 @@
                             <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha" required>
                         </div>
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary btn-lg">Entrar</button>
+                            <button type="submit" class="btn btn-primary">Entrar</button>
                         </div>
                     </form>
                 </div>
-                <div class="card-footer text-center text-muted">
-                    Não tem uma conta? <a href="{{ url_for('cadastro') }}" class="text-decoration-none text-primary">Crie uma agora</a>
+                <div class="card-footer text-center">
+                    <p>Não possui uma conta? <a href="{{ url_for('cadastro') }}" class="text-primary">Cadastre-se</a></p>
                 </div>
             </div>
         </div>
