@@ -7,6 +7,14 @@ app_Mykaelle.secret_key = "secretkey"  # Necessário para mensagens flash
 def login():
     return render_template("login.html")
 
+@app_Mykaelle.route("/contato")
+def contato():
+    return render_template("contato.html")
+
+@app_Mykaelle.route("/sobre")
+def sobre():
+    return render_template("sobre.html")
+
 @app_Mykaelle.route("/cadastro", methods=["GET", "POST"])
 def cadastro():
     if request.method == "POST":

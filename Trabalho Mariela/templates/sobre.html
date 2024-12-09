@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre a Colibri{% endblock %}
+
+{% block content %}
+<section class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Sobre a Colibri</h1>
+            <p>
+                A Colibri é uma solução inovadora desenvolvida para transformar a gestão de tarefas e processos em empresas de diferentes segmentos, com foco especial na contabilidade.
+            </p>
+            <p>
+                Nossa missão é proporcionar uma experiência eficiente e intuitiva, conectando pessoas e processos e, ao mesmo tempo, simplificando a rotina administrativa.
+            </p>
+            <div class="mt-4">
+                <h2>Nosso Propósito</h2>
+                <ul>
+                    <li><strong>Automação inteligente:</strong> Gerencie tarefas e prazos de forma eficaz.</li>
+                    <li><strong>Conexão eficiente:</strong> Promova uma comunicação clara e direta com clientes.</li>
+                    <li><strong>Flexibilidade:</strong> Personalize fluxos de trabalho conforme suas necessidades.</li>
+                </ul>
+            </div>
+            <div class="mt-4">
+                
+                <h2>Diferenciais</h2>
+                <p>
+                    Na Colibri, acreditamos que a inovação está nos detalhes. Por isso, desenvolvemos:
+                </p>
+                <ul>
+                    <li><strong>Processos personalizados:</strong> Modelos adaptáveis às especificidades de cada negócio.</li>
+                    <li><strong>Integração avançada:</strong> Conecte ferramentas e mantenha tudo centralizado.</li>
+                    <li><strong>Suporte dedicado:</strong> Uma equipe pronta para ajudar em cada etapa.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 pt-10 mt-10">
+            <img src="{{ url_for('static', filename='images/contabil.jpg') }}" alt="Imagem ilustrativa da Colibri" class="col-md-12 img-fluid rounded" width="75%"> 
+            <img src="{{ url_for('static', filename='images/telas.jpg') }}" alt="Imagem ilustrativa da Colibri" class="col-md-12 img-fluid rounded" width="324px">
+        </div>
+        
+    </div>
+</section>
+{% endblock %}

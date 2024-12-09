@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Contato - Colibri{% endblock %}
+
+{% block content %}
+<section class="bg-light p-5 rounded shadow-sm">
+    <h1 class="text-center text-primary mb-4">Contato</h1>
+    <div class="row">
+        <!-- Informações de Contato -->
+        <div class="col-md-6">
+            <h2 class="text-secondary">Entre em contato conosco</h2>
+            <p>Estamos disponíveis para ajudar você! Veja como nos encontrar:</p>
+            <ul class="list-unstyled">
+                <li class="mb-3">
+                    <strong>Endereço:</strong> Rua Imigrntes, 123 - Centro, Cidade, Estado, CEP 00000-000
+                </li>
+                <li class="mb-3">
+                    <strong>Telefone:</strong> (11) 1234-5678
+                </li>
+                <li class="mb-3">
+                    <strong>E-mail:</strong> contato@colibri.com.br
+                </li>
+                <li class="mb-3">
+                    <strong>Horário de Atendimento:</strong> Segunda a Sexta, das 8h às 18h
+                </li>
+                <li>
+                    <strong>Redes Sociais:</strong>
+                    <a href="https://facebook.com" target="_blank" class="text-primary me-3">Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="text-primary me-3">Instagram</a>
+                    <a href="https://linkedin.com" target="_blank" class="text-primary">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Espaço para Imagem -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+            <img src="{{ url_for('static', filename='images/imagem.gif') }}" alt="Escritório da Empresa" class="img-fluid rounded">
+        </div>
+    </div>
+</section>
+{% endblock %}
